@@ -1,0 +1,32 @@
+{A8,B8,C8,D8,E8,F8,G8,H8,A7,B7,C7,D7,E7,F7,G7,H7,A6,B6,C6,D6,E6,F6,G6,H6,A5,B5,C5,D5,E5,F5,G5,H5,A4,B4,C4,D4,E4,F4,G4,H4,A3,B3,C3,D3,E3,F3,G3,H3,A2,B2,C2,D2,E2,F2,G2,H2,A1,B1,C1,D1,E1,F1,G1,H1}
+{WR,E ,E ,E ,E ,E ,E ,WR,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,BR,E ,E ,E ,E ,E ,E ,BR}
+{BR,BN,BB,BQ,BK,BB,BN,BR,BP,BP,BP,BP,BP,BP,BP,BP,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,WP,WP,WP,WP,WP,WP,WP,WP,WR,WN,WB,WQ,WK,WB,WN,WR}
+
+
+Image settings:
+{King, Rook, Bishop, Queen, Knight, Pawn, Check, Castling, En Pessant}
+
+Image settings:
+{King, Rook, Bishop, Queen, Knight, Pawn, Check, Castling, En Pessant}
+{0,0,0,0,0,0,0,0}
+
+
+Stage line format:
+{Stage Number}{Stage Title}{Message text}{Next button setting}{Chessboard setting}{Level image control}{CheckStage}{Game board}
+
+Stage Number = used for convienence. Holds the stage number to help maintain order. Is split from the line before processing.
+Stage Title = title displayed along the top of the window above the chessboard.
+Message text = the instructions displayed to the user.
+Next button setting = a boolean value. Only input 0 or 1. Tells the program whether enable or disable the next button.
+Chessboard setting = a boolean value. Only input 0 or 1. Tells the program whether enable or disable the chessboard.
+Level image control = an array of boolean values. This tracks whether or not the progress images at the top are displayed as grayscale or in color. 1 sets it to be displayed.
+Check Stage = an int value corresponding to the int within the controller checkStageConditions method. Used when next button is disabled and have unique win condition that needs to be checked after a move.
+Game board = an array containing the settings for the board. Based off of the current board lettering for positions. The above model can be copied and pieces added. The first line is a measure that can be used to generate new boards.
+
+** The General delimiter is \. Ensure all categories are spaced as the example.
+Stage line Example:
+01\This is a message to update the textbox with\1\0,0,0,0,0,0,0,0\0\E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,BK,E ,E ,E \
+The rook moves along ranks and files, until it hits the edge or another piece.\1\1,1,0,0,0,0,0,0\0\WR,E ,E ,E ,E ,E ,E ,E ,WR,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,E ,BR,E ,E ,E ,E ,E ,E ,E ,BR\
+
+
+

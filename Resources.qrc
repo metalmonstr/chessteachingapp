@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Files">
+        <file alias="Database.txt">StageDatabase.txt</file>
+    </qresource>
+</RCC>
